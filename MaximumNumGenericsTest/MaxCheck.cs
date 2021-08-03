@@ -4,7 +4,7 @@ using System;
 
 namespace MaximumNumGenericsTest
 {
-    public class Tests
+    public class MaxCheck
     {
         Maxnumber check = new Maxnumber();
         //Assign
@@ -15,9 +15,9 @@ namespace MaximumNumGenericsTest
         /// TestCase 1.1
         /// </summary>
         [Test]
-        public void GivenMaxNumFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        public void GivenMaxIntegerNumFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            int actualMax = check.Getmax(300, 200, 220);
+            int actualMax = check.GetmaxInt(300, 200, 220);
             Assert.AreEqual(300, actualMax);
         }
 
@@ -25,9 +25,9 @@ namespace MaximumNumGenericsTest
         /// TestCase 1.2
         /// </summary>
         [Test]
-        public void GivenMaxNumSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        public void GivenMaxIntegerNumSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            int actualMax = check.Getmax(200, 300, 100);
+            int actualMax = check.GetmaxInt(200, 300, 100);
             Assert.AreEqual(300, actualMax);
         }
 
@@ -35,10 +35,39 @@ namespace MaximumNumGenericsTest
         /// TestCase 1.3
         /// </summary>
         [Test]
-        public void GivenMaxNumThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        public void GivenMaxIntegerNumThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            int actualMax = check.Getmax(100, 200, 300);
+            int actualMax = check.GetmaxInt(100, 200, 300);
             Assert.AreEqual(300, actualMax);
+        }
+        /// <summary>
+        /// TestCase 2.1
+        /// </summary>
+        [Test]
+        public void GivenMaxFloatNumFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        {
+            double actualMax = check.GetmaxFloat(300.33, 200.22, 220.11);
+            Assert.AreEqual(300.33, actualMax);
+        }
+
+        /// <summary>
+        /// TestCase 2.2
+        /// </summary>
+        [Test]
+        public void GivenMaxFloatNumSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        {
+            double actualMax = check.GetmaxFloat(200.22, 300.33, 100.11);
+            Assert.AreEqual(300.33, actualMax);
+        }
+
+        /// <summary>
+        /// TestCase 2.3
+        /// </summary>
+        [Test]
+        public void GivenMaxFloatNumThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        {
+            double actualMax = check.GetmaxFloat(100.11, 200.22, 300.33);
+            Assert.AreEqual(300.33, actualMax);
         }
     }
 }
