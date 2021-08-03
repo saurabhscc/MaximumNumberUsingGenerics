@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaximumNumGenerics", "MaximumNumGenerics\MaximumNumGenerics.csproj", "{DFA59D3F-0D8E-4A1F-9D7A-881B510C42C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaximumNumGenericsTest", "MaximumNumGenericsTest\MaximumNumGenericsTest.csproj", "{613E3244-7B4E-495C-B8CB-D369CA2BF23A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFA59D3F-0D8E-4A1F-9D7A-881B510C42C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA59D3F-0D8E-4A1F-9D7A-881B510C42C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA59D3F-0D8E-4A1F-9D7A-881B510C42C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA59D3F-0D8E-4A1F-9D7A-881B510C42C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{613E3244-7B4E-495C-B8CB-D369CA2BF23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613E3244-7B4E-495C-B8CB-D369CA2BF23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613E3244-7B4E-495C-B8CB-D369CA2BF23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613E3244-7B4E-495C-B8CB-D369CA2BF23A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3B9FF48-8A57-4DC9-AFC1-F5E01DA258BE}
+	EndGlobalSection
+EndGlobal
