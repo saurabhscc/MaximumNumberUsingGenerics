@@ -69,6 +69,35 @@ namespace MaximumNumGenericsTest
             double actualMax = check.GetmaxFloat(100.11, 200.22, 300.33);
             Assert.AreEqual(300.33, actualMax);
         }
+        /// <summary>
+        /// TestCase 3.1
+        /// </summary>
+        [Test]
+        public void GivenMaxStringFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        {
+            string actualMax = check.GetmaxString("Apple", "Peach", "Banana");
+            Assert.AreEqual("Peach", actualMax);
+        }
+
+        /// <summary>
+        /// TestCase 3.2
+        /// </summary>
+        [Test]
+        public void GivenMaxStringSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        {
+            string actualMax = check.GetmaxString("Peach", "Apple", "Banana");
+            Assert.AreEqual("Peach", actualMax);
+        }
+
+        /// <summary>
+        /// TestCase 3.3
+        /// </summary>
+        [Test]
+        public void GivenMaxStringThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
+        {
+            string actualMax = check.GetmaxString("Banana", "Peach", "Apple");
+            Assert.AreEqual("Peach", actualMax);
+        }
     }
 }
 

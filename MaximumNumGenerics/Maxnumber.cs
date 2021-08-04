@@ -26,6 +26,24 @@ namespace MaximumNumGenerics
                 return num3;
             throw new Exception("3 values are Equal");
         }
+        public string GetmaxString(string String1, string String2, string String3)
+        {
+            if (String1.CompareTo(String2) > 0 && String1.CompareTo(String3) > 0 || String1.CompareTo(String2) >= 0 && String1.CompareTo(String3) > 0 || String1.CompareTo(String2) > 0 && String1.CompareTo(String3) >= 0 )
+            {
+                return String1;
+            }
+            if (String2.CompareTo(String1) > 0 && String2.CompareTo(String3) > 0 || String2.CompareTo(String1) >= 0 && String2.CompareTo(String3) > 0 || String2.CompareTo(String1) > 0 && String2.CompareTo(String3) >= 0 )
+            {
+                return String2;
+            }
+               
+            if (String3.CompareTo(String1) > 0 && String3.CompareTo(String2) > 0 || String3.CompareTo(String1) >= 0 && String3.CompareTo(String2) > 0 || String3.CompareTo(String1) > 0 && String3.CompareTo(String2) >= 0) 
+            {
+                return String3;
+            }
+                
+            throw new Exception("3 values are Equal");
+        }
 
     }
 }
