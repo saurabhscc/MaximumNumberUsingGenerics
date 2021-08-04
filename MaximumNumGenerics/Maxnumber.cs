@@ -4,9 +4,19 @@ using System.Text;
 
 namespace MaximumNumGenerics
 {
-    public class Maxnumber
+    public class Maxnumber<T> where T : IComparable
     {
-        public int GetmaxInt(int num1, int num2, int num3)
+        /// <summary>
+        /// Generic Class for finding Maximum value Int Or Float Or String (With Constructor)
+        /// </summary>
+        public T num1, num2, num3;
+        public Maxnumber(T num1, T num2, T num3)
+        {
+            this.num1 = num1;
+            this.num2 = num2; 
+            this.num3 = num3;
+        }
+        public T Getmax()
         {
             if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
                 return num1;
@@ -16,9 +26,9 @@ namespace MaximumNumGenerics
                 return num3;
             throw new Exception("3 values are Equal");
         }
-        public double GetmaxFloat(double num1, double num2, double num3)
+        public T GetmaxFloat()
         {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
+          if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
                 return num1;
             if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0)
                 return num2;
@@ -26,24 +36,15 @@ namespace MaximumNumGenerics
                 return num3;
             throw new Exception("3 values are Equal");
         }
-        public string GetmaxString(string String1, string String2, string String3)
+        public T GetmaxString()
         {
-            if (String1.CompareTo(String2) > 0 && String1.CompareTo(String3) > 0 || String1.CompareTo(String2) >= 0 && String1.CompareTo(String3) > 0 || String1.CompareTo(String2) > 0 && String1.CompareTo(String3) >= 0 )
-            {
-                return String1;
-            }
-            if (String2.CompareTo(String1) > 0 && String2.CompareTo(String3) > 0 || String2.CompareTo(String1) >= 0 && String2.CompareTo(String3) > 0 || String2.CompareTo(String1) > 0 && String2.CompareTo(String3) >= 0 )
-            {
-                return String2;
-            }
-               
-            if (String3.CompareTo(String1) > 0 && String3.CompareTo(String2) > 0 || String3.CompareTo(String1) >= 0 && String3.CompareTo(String2) > 0 || String3.CompareTo(String1) > 0 && String3.CompareTo(String2) >= 0) 
-            {
-                return String3;
-            }
-                
+            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0 || num1.CompareTo(num2) >= 0 && num1.CompareTo(num3) > 0 || num1.CompareTo(num2) > 0 && num1.CompareTo(num3)>= 0)
+                return num1;
+            if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0 || num2.CompareTo(num1) >= 0 && num2.CompareTo(num3) > 0 || num2.CompareTo(num1) > 0 && num2.CompareTo(num3) >= 0)
+                return num2;
+            if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0  || num3.CompareTo(num1) >= 0 && num3.CompareTo(num2) > 0 || num3.CompareTo(num1) > 0 && num3.CompareTo(num2) >= 0)
+                return num3;
             throw new Exception("3 values are Equal");
         }
-
     }
 }
