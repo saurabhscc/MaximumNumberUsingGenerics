@@ -6,45 +6,33 @@ namespace MaximumNumGenerics
 {
     public class Maxnumber<T> where T : IComparable
     {
+
         /// <summary>
         /// Generic Class for finding Maximum value Int Or Float Or String (With Constructor)
         /// </summary>
-        public T num1, num2, num3;
-        public Maxnumber(T num1, T num2, T num3)
+        public T[] value;
+        public Maxnumber(T[] value)
         {
-            this.num1 = num1;
-            this.num2 = num2; 
-            this.num3 = num3;
+            this.value = value;
         }
-        public T Getmax()
+        public T[] Sort(T[] values)
         {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
-                return num1;
-            if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0)
-                return num2;
-            if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0)
-                return num3;
-            throw new Exception("3 values are Equal");
+             Array.Sort(values);
+             return values;
         }
-        public T GetmaxFloat()
+         public T Maxnum(T[] values)
+         {
+              var maxValue = Sort(values);
+              return maxValue[^1];    //^1 is the first Index from End, So it gives sorted Max Value from End of Array
+         }
+          /// <summary>
+        /// Maximum Method to Find Maximim Value
+        /// </summary>
+        public void PrintMax()
         {
-          if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0)
-                return num1;
-            if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0)
-                return num2;
-            if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0)
-                return num3;
-            throw new Exception("3 values are Equal");
+            var print = Maxnum(this.value);
+            Console.WriteLine("Maximum Value is: " + print);
         }
-        public T GetmaxString()
-        {
-            if (num1.CompareTo(num2) > 0 && num1.CompareTo(num3) > 0 || num1.CompareTo(num2) >= 0 && num1.CompareTo(num3) > 0 || num1.CompareTo(num2) > 0 && num1.CompareTo(num3)>= 0)
-                return num1;
-            if (num2.CompareTo(num1) > 0 && num2.CompareTo(num3) > 0 || num2.CompareTo(num1) >= 0 && num2.CompareTo(num3) > 0 || num2.CompareTo(num1) > 0 && num2.CompareTo(num3) >= 0)
-                return num2;
-            if (num3.CompareTo(num1) > 0 && num3.CompareTo(num2) > 0  || num3.CompareTo(num1) >= 0 && num3.CompareTo(num2) > 0 || num3.CompareTo(num1) > 0 && num3.CompareTo(num2) >= 0)
-                return num3;
-            throw new Exception("3 values are Equal");
-        }
-    }
+     }
 }
+

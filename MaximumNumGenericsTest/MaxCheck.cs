@@ -17,8 +17,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxIntegerNumFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<int>check = new Maxnumber<int>(300, 200, 220);
-            int actualMax = check.Getmax();
+            int[] intValues = { 300, 200, 100, 250 };
+            Maxnumber<int> maxnumberint = new Maxnumber<int>(intValues);
+            int actualMax= maxnumberint.Maxnum(intValues);
             Assert.AreEqual(300, actualMax);
         }
 
@@ -28,8 +29,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxIntegerNumSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<int> check = new Maxnumber<int>(200, 300, 100);
-            int actualMax = check.Getmax(); 
+            int[] intValues = { 300, 200, 100, 250 };
+            Maxnumber<int> maxnumberint = new Maxnumber<int>(intValues);
+            int actualMax = maxnumberint.Maxnum(intValues);
             Assert.AreEqual(300, actualMax);
         }
 
@@ -39,8 +41,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxIntegerNumThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<int> check = new Maxnumber<int>(100, 200, 300);
-            int actualMax = check.Getmax();
+           int[] intValues = { 300, 200, 100, 250 };
+            Maxnumber<int> maxnumberint = new Maxnumber<int>(intValues);
+            int actualMax= maxnumberint.Maxnum(intValues);
             Assert.AreEqual(300, actualMax);
         }
         /// <summary>
@@ -49,8 +52,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxFloatNumFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<double> check = new Maxnumber<double>(300.33, 200.22, 220.11);
-            double actualMax = check.GetmaxFloat();
+            double[] doubleValues = { 300.33, 200.22, 100, 250.55 };
+            Maxnumber<double> maxnumberdouble = new Maxnumber<double>(doubleValues);
+            double actualMax=maxnumberdouble.Maxnum(doubleValues);
             Assert.AreEqual(300.33, actualMax);
         }
 
@@ -60,8 +64,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxFloatNumSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<double> check = new Maxnumber<double>(200.22, 300.33, 100.11);
-            double actualMax = check.GetmaxFloat();
+            double[] doubleValues = { 300.33, 200.22, 100, 250.55 };
+            Maxnumber<double> maxnumberdouble = new Maxnumber<double>(doubleValues);
+            double actualMax = maxnumberdouble.Maxnum(doubleValues);
             Assert.AreEqual(300.33, actualMax);
         }
 
@@ -71,8 +76,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxFloatNumThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<double> check = new Maxnumber<double>(100.11, 200.22, 300.33);
-            double actualMax = check.GetmaxFloat();
+            double[] doubleValues = { 300.33, 200.22, 100, 250.55 };
+            Maxnumber<double> maxnumberdouble = new Maxnumber<double>(doubleValues);
+            double actualMax = maxnumberdouble.Maxnum(doubleValues);
             Assert.AreEqual(300.33, actualMax);
         }
         /// <summary>
@@ -81,8 +87,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxStringFirstPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<string> check = new Maxnumber<string>("Apple", "Peach", "Banana");
-            string actualMax = check.GetmaxString();
+            string[] stringValues = { "Peach", "Apple", "Banana", "Guava" };
+            Maxnumber<string> maxnumberstring = new Maxnumber<string>(stringValues);
+            string actualMax=maxnumberstring.Maxnum(stringValues);
             Assert.AreEqual("Peach", actualMax);
         }
         /// <summary>
@@ -91,8 +98,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxStringSecondPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<string> check = new Maxnumber<string>( "Peach", "Apple","Banana");
-            string actualMax = check.GetmaxString();
+            string[] stringValues = { "Peach", "Apple", "Banana", "Guava" };
+            Maxnumber<string> maxnumberstring = new Maxnumber<string>(stringValues);
+            string actualMax = maxnumberstring.Maxnum(stringValues);
             Assert.AreEqual("Peach", actualMax);
         }
 
@@ -102,8 +110,9 @@ namespace MaximumNumGenericsTest
         [Test]
         public void GivenMaxStringThirdPosition_WhenGetMaxNum_ShouldReturnsMaxFirst()
         {
-            Maxnumber<string> check = new Maxnumber<string>("Banana", "Peach", "Apple");
-            string actualMax = check.GetmaxString();
+            string[] stringValues = { "Peach", "Apple", "Banana", "Guava" };
+            Maxnumber<string> maxnumberstring = new Maxnumber<string>(stringValues);
+            string actualMax = maxnumberstring.Maxnum(stringValues);
             Assert.AreEqual("Peach", actualMax);
         }
     }
